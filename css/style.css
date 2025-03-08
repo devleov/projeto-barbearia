@@ -1,0 +1,587 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização da seta */
+.box-seta {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-content: center;
+  background-color: #1B1B1B;
+  height: 250px;
+  width: 100%;
+}
+.box-seta img {
+  background-color: transparent;
+  height: 100%;
+  width: 200px;
+}
+
+/* Nav bar */
+.nav-bar {
+  display: flex;
+  padding: 0 20px;
+  height: 99px;
+  background-color: #1B1B1B;
+}
+.nav-bar .box-logo {
+  height: 99px;
+  width: 20%;
+}
+.nav-bar .box-logo img {
+  height: 100%;
+}
+
+/* Caixa de links da nav-bar */
+.box-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  -moz-column-gap: 65px;
+       column-gap: 65px;
+}
+.box-link li {
+  list-style-type: none;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
+.box-link a {
+  text-decoration: none;
+  color: #FEECB7;
+}
+
+/* Botão de agendamento da nav-bar */
+.btn-scheduling {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-scheduling img {
+  height: 20px;
+  width: 20px;
+}
+.btn-scheduling button {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  padding: 12px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
+  background-color: #8B0000;
+  color: #FEECB7;
+  transition: 0.2s;
+}
+.btn-scheduling button:hover {
+  background-color: #610000;
+  scale: 0.99;
+}
+.btn-scheduling a {
+  text-decoration: none;
+}
+
+/* Linha vermelha (apresentação) */
+.red-line {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 420px;
+  width: 100%;
+  border: 1px solid gray;
+  background: url("../img/apresentacao.avif");
+  background-size: cover;
+  background-position: top;
+  border-top: 1px solid #1B1B1B;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  z-index: 1;
+  /* Conteúdo da apresentação */
+  /* Efeito para desvanecer a imagem da apresentação */
+}
+.red-line .content-red-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 55px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  position: absolute;
+  z-index: 3;
+  color: white;
+  /* Botão de conhecer a barbearia */
+}
+.red-line .content-red-line h1 {
+  text-align: center;
+  color: #FEECB7;
+}
+.red-line .content-red-line p {
+  color: #FEECB7;
+}
+.red-line .content-red-line .box-courteous a {
+  text-decoration: none;
+}
+.red-line .content-red-line .box-courteous button {
+  padding: 12px 20px;
+  border-bottom: 1px solid black;
+  border-radius: 15px;
+  font-size: 22px;
+  font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
+  background-color: #8B0000;
+  border: 1px solid black;
+  color: #FEECB7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s background-color;
+}
+.red-line .content-red-line .box-courteous button img {
+  height: 25px;
+  width: 30px;
+}
+.red-line .content-red-line .box-courteous button:hover {
+  background-color: #610000;
+}
+.red-line .content-red-line .box-courteous button a {
+  text-decoration: none;
+  color: black;
+}
+.red-line:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7607843137);
+  z-index: 2;
+}
+
+/* História da barbearia */
+.history-barber {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  min-height: 500px;
+  background: url("/img/historia.avif");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.history-barber:before {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.725), black);
+}
+.history-barber .content-history-barber {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  row-gap: 25px;
+  height: 100%;
+  color: white;
+  z-index: 3;
+}
+.history-barber .content-history-barber h2 {
+  font-size: 45px;
+  font-family: "Oswald", sans-serif;
+  color: #FEECB7;
+}
+.history-barber .content-history-barber p {
+  font-size: 23px;
+}
+.history-barber .box-img-history-barber {
+  height: 350px;
+  width: 50%;
+  z-index: 3;
+}
+.history-barber .box-img-history-barber img {
+  height: 100%;
+  width: 350px;
+}
+
+/* Tipos de cortes */
+.cuts-types {
+  border-top: 1px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 60px;
+  min-height: 980px;
+}
+.cuts-types .img-cuts-type {
+  background: url("/img/apresentacao.jpg");
+  height: 100%;
+  width: 100%;
+}
+.cuts-types .img-cuts-type:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background: linear-gradient(black, black, #1B1B1B);
+}
+.cuts-types h2 {
+  position: relative;
+  z-index: 2;
+  margin-top: 70px;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Oswald", sans-serif;
+  color: #C9A94F;
+}
+.cuts-types .container-cuts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  min-height: 400px;
+  border: 1px solid black;
+  padding: 100px;
+}
+.cuts-types .container-cuts .card-cut {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 12px;
+}
+.cuts-types .container-cuts .card-cut .box-img-cut {
+  background-color: black;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.cuts-types .container-cuts .card-cut .box-img-cut img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  transition: scale 0.2s, opacity 0.2s;
+}
+.cuts-types .container-cuts .card-cut .content-card-cut {
+  border: 2px solid #C9A94F;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+}
+.cuts-types .container-cuts .card-cut:hover img {
+  scale: 1.03;
+  opacity: 0.5;
+}
+.cuts-types .container-cuts .card-cut:hover h3, .cuts-types .container-cuts .card-cut:hover p {
+  opacity: 1;
+}
+.cuts-types .container-cuts .card-cut:hover .detalhe {
+  opacity: 0;
+}
+.cuts-types .container-cuts .card-cut h3 {
+  cursor: default;
+  padding-left: 30px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: #FEECB7;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.cuts-types .container-cuts .card-cut p {
+  cursor: default;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.cuts-types .container-cuts .card-cut .detalhe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0px;
+  text-shadow: 0 0 2px 2px black;
+  background-color: #C9A94F;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-decoration: underline;
+  position: absolute;
+  color: black;
+  height: 30px;
+  width: 300px;
+  opacity: 1;
+}
+.cuts-types .container-cuts .card-cut .detalhe img {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+/* Caixa de localização */
+.box-location {
+  overflow: hidden;
+  display: flex;
+  min-height: 400px;
+  background: linear-gradient(to left, #1B1B1B, #000000, #1B1B1B);
+}
+.box-location .content-location {
+  display: flex;
+  flex-direction: column;
+  row-gap: 34px;
+  padding: 30px;
+  width: 30%;
+  height: 100%;
+}
+.box-location .content-location h2 {
+  font-size: 34px;
+  color: #FEECB7;
+  font-family: "Oswald", sans-serif;
+}
+.box-location .content-location p {
+  font-size: 17px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.box-location .map-location {
+  width: 70%;
+}
+
+/* Seção de agendamento */
+.scheduling {
+  display: flex;
+  min-height: 500px;
+  flex-direction: row-reverse;
+  padding: 0 30px 0 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#1B1B1B, black);
+}
+.scheduling .content-scheduling {
+  width: 60%;
+}
+.scheduling .scheduling-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 140px;
+}
+.scheduling .scheduling-titles h2 {
+  font-size: 34px;
+  color: #C9A94F;
+  font-family: "Poppins", sans-serif;
+}
+.scheduling .scheduling-titles p {
+  font-size: 25px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+.scheduling .scheduling-inputs {
+  display: flex;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  row-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+.scheduling .scheduling-inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+  justify-content: center;
+  width: 50%;
+}
+.scheduling .scheduling-inputs input,
+.scheduling .scheduling-inputs select,
+.scheduling .scheduling-inputs textarea {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+.scheduling .scheduling-inputs textarea {
+  min-width: 100%;
+  max-width: 305px;
+  max-height: 137px;
+  min-height: 47px;
+}
+.scheduling .img-scheduling {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+.scheduling .img-scheduling img {
+  height: 90%;
+  width: 100%;
+  border-radius: 10px;
+}
+.scheduling .btn-scheduling-now {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.scheduling .btn-scheduling-now button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  width: 50%;
+  border: 1px solid black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #8B0000;
+  color: white;
+  transition: background-color 0.2s, scale 0.2s;
+}
+.scheduling .btn-scheduling-now button:hover {
+  background-color: #610000;
+  scale: 0.99;
+}
+.scheduling .btn-scheduling-now button img {
+  height: 20px;
+  width: 20px;
+}
+
+/* Seção do rodapé do site */
+.box-logo-footer {
+  display: flex;
+  align-items: center;
+  row-gap: 12px;
+  background: linear-gradient(to left, #b9b9b9, black);
+  height: 100px;
+  width: 100%;
+}
+.box-logo-footer img {
+  height: 100px;
+  width: 100px;
+}
+.box-logo-footer p {
+  font-size: 22px;
+  color: #C9A94F;
+  font-family: "Oswald", sans-serif;
+}
+
+.footer {
+  height: 250px;
+  width: 100%;
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+.footer div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 20px;
+}
+.footer div h2 {
+  font-size: 30px;
+  color: #FEECB7;
+  font-family: "Bebas Naue", sans-serif;
+}
+.footer div ul li {
+  font-family: "Bebas Naue", sans-serif;
+  color: #b9b9b9;
+  font-size: 17px;
+}
+.footer div ul li a {
+  color: #b9b9b9;
+  text-decoration: none;
+}
+.footer div ul li a:hover {
+  text-decoration: underline;
+}
+.footer .social-footer a {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.footer .social-footer a img {
+  height: 20px;
+  width: 20px;
+}
+
+.autoral-footer {
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(#1B1B1B, black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.autoral-footer p {
+  color: #C9A94F;
+  font-family: "Bebas Naue", sans-serif;
+  font-size: 15px;
+}
+
+/* Suporte do whatsapp */
+.contact-whatsapp {
+  height: 200px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.contact-whatsapp img {
+  height: 200px;
+  width: 100px;
+}/*# sourceMappingURL=style.css.map */
