@@ -6,22 +6,6 @@
   box-sizing: border-box;
 }
 
-/* Estilização da seta */
-.box-seta {
-  display: flex;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  justify-content: center;
-  background-color: #1B1B1B;
-  height: 250px;
-  width: 100%;
-}
-.box-seta img {
-  background-color: transparent;
-  height: 100%;
-  width: 200px;
-}
-
 /* Nav bar */
 .nav-bar {
   display: flex;
@@ -177,7 +161,7 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   min-height: 500px;
-  background: url("/img/historia.avif");
+  background: url("../img/historia.avif");
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -229,7 +213,7 @@
   min-height: 980px;
 }
 .cuts-types .img-cuts-type {
-  background: url("/img/apresentacao.jpg");
+  background: url("../img/apresentacao.jpg");
   height: 100%;
   width: 100%;
 }
