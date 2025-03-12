@@ -13,6 +13,7 @@
     display: flex;
     padding: 0 20px;
     height: 99px;
+    width: 100%;
     background-color: #1B1B1B;
 
     .box-logo {
@@ -418,7 +419,7 @@
                 position: absolute;
                 color: black;
                 height: 30px;
-                width: 300px;
+                width: 100%;
                 // border: 1px solid red;
                 opacity: 1;
 
@@ -727,9 +728,34 @@
     right: 10px;
     padding: 10px;
     border-radius: 10px;
+    opacity: 1;
+    transition: opacity .2s;
 
     img {
         height: 200px;
         width: 100px;
+    }
+}
+
+
+
+
+/* Efeito tremendo */
+
+@keyframes tremer {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    25% {
+        transform: translateX(10px)
+    }
+
+    50% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(10px)
     }
 }

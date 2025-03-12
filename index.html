@@ -18,14 +18,13 @@
         </div>
 
         <ul class="box-link">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#nossa-historia">Nossa História</a></li>
-            <li><a href="#cortes">Cortes</a></li>
-            <li><a href="#localizacao">Localização</a></li>
-
+            <li id="link"><a href="#inicio">Início</a></li>
+            <li id="link"><a href="#nossa-historia">Nossa História</a></li>
+            <li id="link"><a href="#cortes">Cortes</a></li>
+            <li id="link"><a href="#localizacao">Localização</a></li>
         </ul>
 
-        <div class="btn-scheduling">
+        <div class="btn-scheduling" id="link">
             <a href="#agendamento"><button>
                     <img src="img/icone-agendamento.png" alt="icone-agendamento"> Agendamento
                 </button></a>
@@ -40,7 +39,7 @@
             </div>
 
             <div class="box-courteous">
-                <a href="#"><button>
+                <a href="#localizacao"><button>
                         <img src="img/lupa.webp" alt="icone-lupa"> Conheça nossa barbearia!
                 </button></a>
             </div>
@@ -229,7 +228,7 @@
         <div class="links-footer">
             <h2>Navegação</h2>
 
-            <ul class="links-footer">
+            <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#nossa-historia">Nossa História</a></li>
                 <li><a href="#cortes">Cortes</a></li>
@@ -241,7 +240,7 @@
         <div class="info-contact-footer">
             <h2>Contato</h2>
 
-            <ul class="info-contact-footer">
+            <ul>
                 <li>📍 Endereço: Rua Exemplo, 123 – Centro, Cidade</li>
                 <li>📞 Telefone: (XX) 99999-9999</li>
                 <li>📧 E-mail: contato@borcellebarbearia.com</li>
@@ -251,7 +250,7 @@
         <div class="social-footer">
             <h2>Redes sociais</h2>
 
-            <ul class="social-footer">
+            <ul>
                 <li><a href="#"><img src="img/social-footer/instagram-icone.png" alt="icone-instagram"> Instagram</a></li>
                 <li><a href="#"><img src="img/social-footer/facebook-icone.webp" alt="icone-facebook"> Facebook</a></li>
                 <li><a href="#"><img src="img/social-footer/whatsapp-icone.webp" alt="icone-whatsapp"> WhatsApp</a></li>
@@ -268,7 +267,9 @@
         <a href="#"><img src="img/whats.png" alt="suporte-whatsapp"></a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/transitionLinks.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
