@@ -11,6 +11,7 @@
 
 .nav-bar {
     display: flex;
+    align-items: center;
     padding: 0 20px;
     height: 99px;
     width: 100%;
@@ -142,6 +143,8 @@
 
         p {
             color: #FEECB7;
+            text-align: center;
+            padding: 0 20px;
         }
 
         /* Botão de conhecer a barbearia */
@@ -296,7 +299,7 @@
     h2 {
         position: relative;
         z-index: 2;
-        margin-top: 70px;
+        margin: 70px 20px 0 20px;
         text-align: center;
         font-size: 45px;
         font-family: "Oswald", sans-serif;
@@ -319,6 +322,7 @@
             position: relative;
             height: 300px;
             width: 300px;
+            overflow: hidden;
 
             border-radius: 12px;
 
@@ -477,8 +481,20 @@
 /* Seção de agendamento */
 
 .scheduling {
+    .scheduling-warns {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 21px;
+        font-family: "Open Sans", sans-serif;
+        color: #8B0000;
+        font-weight: bold;
 
+        opacity: 0;
+        transition: opacity .2s;
+    }
 
+    position: relative;
     display: flex;
     min-height: 500px;
     flex-direction: row-reverse;
@@ -486,6 +502,13 @@
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(#1B1B1B, black);
     // border: 1px solid red;
+
+    & label {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        color: #C9A94F;
+    }
 
     .content-scheduling {
         width: 60%;
@@ -563,6 +586,7 @@
             height: 90%;
             width: 100%;
             border-radius: 10px;
+            object-fit: cover;
         }
     }
 
@@ -612,6 +636,7 @@
     display: flex;
     align-items: center;
     row-gap: 12px;
+    padding: 0 20px;
 
     background: linear-gradient(to left, #b9b9b9, black);
 
@@ -694,6 +719,8 @@
 .autoral-footer {
     height: 50px;
     width: 100%;
+    padding: 0 20px;
+    text-align: center;
     // border: 1px solid brown;
 
     background: linear-gradient(#1B1B1B, black);

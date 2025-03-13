@@ -9,6 +9,9 @@
 
     <link rel="icon" href="img/logo-barbearia-s-f.png">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Responsividade -->
+    <link rel="stylesheet" href="css/responsive/resp.css">
 </head>
 
 <body>
@@ -16,6 +19,8 @@
         <div class="box-logo">
             <img src="img/logo-barbearia-s-f.png" alt="logo-barbearia">
         </div>
+        
+        <div class="menu-link"></div>
 
         <ul class="box-link">
             <li id="link"><a href="#inicio">Início</a></li>
@@ -178,6 +183,8 @@
 
 
     <section class="scheduling" id="agendamento">
+        <p id="scheduling-warns" class="scheduling-warns"></p>
+
         <div class="content-scheduling">
             <div class="scheduling-titles">
                 <h2>Agende seu Corte</h2>
@@ -186,20 +193,28 @@
 
             <div class="scheduling-inputs">
                 <div>
-                    <input type="text" placeholder="Insira seu nome">
-                    <input type="text" placeholder="Horário desejado. Ex: 9:00">
+                    <label for="scheduling-name">Insira seu nome:</label>
+                    <input required id="scheduling-name" type="text" placeholder="Insira seu nome">
+
+                    <label for="scheduling-hour">Insira o horário previsto:</label>
+                    <select id="scheduling-hour">
+                        <option disabled selected>Selecione</option>
+                    </select>
                 </div>
 
                 <div>
-                    <select>
-                        <option value="" selected disabled>Qual corte gostaria de fazer?</option>
+                    <label for="scheduling-cut">Qual corte gostaria de fazer?</label>
+
+                    <select required id="scheduling-cut">
                         <option>Fade</option>
                         <option>Undercut</option>
                         <option>Pompadour</option>
                         <option>Buzz Cut</option>
                         <option>Corte Americano</option>
                     </select>
-                    <textarea placeholder="Insira como você deseja seu corte!"></textarea>
+
+                    <label for="scheduling-date">Data do corte:</label>
+                    <input required type="date" id="scheduling-date">
                 </div>
 
             </div>

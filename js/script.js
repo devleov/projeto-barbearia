@@ -28,3 +28,38 @@ window.addEventListener("scroll", () => {
         icone_whatsapp.css("pointer-events", "visible")
     }
 });
+
+
+/* Fazendo o input de horário do agendamento */
+for (let i = 8; i < 18; i++) {
+    $("#scheduling-hour").append(`<option>${i}:00</option>`)
+}
+
+/* Pegando os valores dos campos de agendamento */
+$(".btn-scheduling-now > button").click(function () {
+
+    const nomeAgendamento = $("#scheduling-name").val()
+    const hourAgendamento = $("#scheduling-hour").val()
+    const corteAgendamento = $("#scheduling-cut").val()
+    const dataAgendamento = $("#scheduling-date").val()
+
+    if (!nomeAgendamento || !hourAgendamento || !corteAgendamento || !dataAgendamento) {
+        $("#scheduling-warns").text("* Preencha todos os campos!")
+            .css("opacity", 1)
+
+        setTimeout(() => {
+            $("#scheduling-warns").css("opacity", 0)
+
+            setTimeout(() => {
+                $("#scheduling-warns").text("")
+            }, 500)
+        }, 7000)
+    }
+
+    const msg = `Olá, meu nome é ${nomeAgendamento} e gostaria de agendar um corte de cabelo no(a):
+    Dia: ${dataAgendamento}
+    Hora prevista: ${hourAgendamento}
+    Corte de cabelo: ${corteAgendamento}`;
+
+    console.log(msg);
+});

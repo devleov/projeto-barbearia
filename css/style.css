@@ -9,6 +9,7 @@
 /* Nav bar */
 .nav-bar {
   display: flex;
+  align-items: center;
   padding: 0 20px;
   height: 99px;
   width: 100%;
@@ -115,6 +116,8 @@
 }
 .red-line .content-red-line p {
   color: #FEECB7;
+  text-align: center;
+  padding: 0 20px;
 }
 .red-line .content-red-line .box-courteous a {
   text-decoration: none;
@@ -229,7 +232,7 @@
 .cuts-types h2 {
   position: relative;
   z-index: 2;
-  margin-top: 70px;
+  margin: 70px 20px 0 20px;
   text-align: center;
   font-size: 45px;
   font-family: "Oswald", sans-serif;
@@ -251,6 +254,7 @@
   position: relative;
   height: 300px;
   width: 300px;
+  overflow: hidden;
   border-radius: 12px;
 }
 .cuts-types .container-cuts .card-cut .box-img-cut {
@@ -372,12 +376,30 @@
 
 /* Seção de agendamento */
 .scheduling {
+  position: relative;
   display: flex;
   min-height: 500px;
   flex-direction: row-reverse;
   padding: 0 30px 0 0;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(#1B1B1B, black);
+}
+.scheduling .scheduling-warns {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 21px;
+  font-family: "Open Sans", sans-serif;
+  color: #8B0000;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.scheduling label {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #C9A94F;
 }
 .scheduling .content-scheduling {
   width: 60%;
@@ -443,6 +465,8 @@
   height: 90%;
   width: 100%;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .scheduling .btn-scheduling-now {
   display: flex;
@@ -481,6 +505,7 @@
   display: flex;
   align-items: center;
   row-gap: 12px;
+  padding: 0 20px;
   background: linear-gradient(to left, #b9b9b9, black);
   height: 100px;
   width: 100%;
@@ -541,6 +566,8 @@
 .autoral-footer {
   height: 50px;
   width: 100%;
+  padding: 0 20px;
+  text-align: center;
   background: linear-gradient(#1B1B1B, black);
   display: flex;
   align-items: center;
