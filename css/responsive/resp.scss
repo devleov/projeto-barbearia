@@ -7,6 +7,7 @@
 }
 
 @media screen and (max-width: 880px) {
+
     /* Removendo o botão de agendamento da nav-bar */
     .btn-scheduling {
         display: none;
@@ -43,14 +44,15 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        padding: 0 30px;
+        padding: 40px 30px;
     }
 
     .img-scheduling {
         display: none !important;
     }
 
-    .img-scheduling, .content-scheduling {
+    .img-scheduling,
+    .content-scheduling {
         width: initial !important;
     }
 
@@ -66,7 +68,7 @@
     }
 
     .box-img-history-barber {
-        width: initial !important; 
+        width: initial !important;
     }
 
     /* Corrigindo o vazamento do rodapé */
@@ -77,6 +79,7 @@
 }
 
 @media screen and (max-width: 636px) {
+
     /* Ajustando a organização da nav-bar */
     .nav-bar {
         justify-content: space-between;
@@ -89,12 +92,41 @@
 
     /* Adicionando o menu de links da nav-bar */
     .menu-link {
-        display: block;
-        height: 65px;
-        width: 65px;
-        background-color: #ccc;
-        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        row-gap: 10px;
+
+        height: 55px;
+        width: 50px;
+        background-color: transparent;
+        // border: 1px solid black;
         border-radius: 10px;
+
+        .row {
+            width: 100%;
+            border: 3px solid #FEECB7;
+            border-radius: 10px;
+            padding: 0 3px;
+
+            transition: .2s;
+        }
+
+        &.active span:nth-child(1) {
+            transform: translateY(17px) rotate(45deg);
+        }
+
+        &.active span:nth-child(3) {
+            transform: translateY(-15px) rotate(-45deg);
+        }
+
+        &.active span:nth-child(2) {
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     /* Deixando os inputs do agendamento um em baixo do outro na caixa flexiva */
@@ -109,18 +141,19 @@
     .content-scheduling {
         display: flex;
         flex-direction: column;
-        row-gap: 30px;
+        row-gap: 100px;
     }
 }
 
 @media screen and (max-width: 421px) {
+
     /* Diminuindo o preenchimento da caixa dos estilos de cortes */
     .container-cuts {
         padding: 60px !important;
     }
 
     /* Diminuindo a fonte do card de estilo de corte */
-    .content-card-cut > p {
+    .content-card-cut>p {
         font-size: 14px !important;
     }
 }

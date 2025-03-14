@@ -42,6 +42,40 @@
   color: #FEECB7;
 }
 
+/* Caixa de links do menu */
+.box-menu-link {
+  display: none;
+}
+
+/* Configurando a caixa de links do menu */
+.box-menu-link {
+  position: absolute;
+  top: 99px;
+  left: 0;
+  padding: 40px;
+  z-index: 999;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEECB7;
+}
+.box-menu-link ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  row-gap: 40px;
+}
+.box-menu-link ul a {
+  color: black;
+  font-size: 17px;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Botão de agendamento da nav-bar */
 .btn-scheduling {
   width: 20%;
@@ -164,7 +198,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row-reverse;
-  min-height: 500px;
+  min-height: 520px;
   background: url("../img/historia.jpg");
   background-size: cover;
   background-position: center;
@@ -376,6 +410,7 @@
 
 /* Seção de agendamento */
 .scheduling {
+  height: 100%;
   position: relative;
   display: flex;
   min-height: 500px;
@@ -588,8 +623,8 @@
   align-items: center;
   z-index: 999;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   padding: 10px;
   border-radius: 10px;
   opacity: 1;

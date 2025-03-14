@@ -32,12 +32,13 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 0 30px;
+    padding: 40px 30px;
   }
   .img-scheduling {
     display: none !important;
   }
-  .img-scheduling, .content-scheduling {
+  .img-scheduling,
+  .content-scheduling {
     width: initial !important;
   }
   .btn-scheduling-now button {
@@ -69,12 +70,33 @@
   }
   /* Adicionando o menu de links da nav-bar */
   .menu-link {
-    display: block;
-    height: 65px;
-    width: 65px;
-    background-color: #ccc;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    row-gap: 10px;
+    height: 55px;
+    width: 50px;
+    background-color: transparent;
     border-radius: 10px;
+  }
+  .menu-link .row {
+    width: 100%;
+    border: 3px solid #FEECB7;
+    border-radius: 10px;
+    padding: 0 3px;
+    transition: 0.2s;
+  }
+  .menu-link.active span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+  }
+  .menu-link.active span:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+  }
+  .menu-link.active span:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
   }
   /* Deixando os inputs do agendamento um em baixo do outro na caixa flexiva */
   .scheduling-inputs {
@@ -86,7 +108,7 @@
   .content-scheduling {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 100px;
   }
 }
 @media screen and (max-width: 421px) {

@@ -63,3 +63,18 @@ $(".btn-scheduling-now > button").click(function () {
 
     console.log(msg);
 });
+
+
+/* Animação no menu ao clicar e ao fechar */
+
+$(".menu-link").click(function() {
+    $(this).toggleClass("active")
+    $(".box-menu-link").toggleClass("active").slideToggle(2000)
+});
+
+$(window).resize(function() {
+    if ($(this).width() >= 636) {
+        $(".menu-link").removeClass("active")
+        $(".box-menu-link").css("display", "none").removeClass("active")
+    }
+})
