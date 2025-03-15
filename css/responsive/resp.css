@@ -1,10 +1,4 @@
 @charset "UTF-8";
-@media screen and (max-width: 1000px) {
-  /* Removendo o primeiro link `inicio` do box-link */
-  .box-link li:nth-child(1) {
-    display: none;
-  }
-}
 @media screen and (max-width: 880px) {
   /* Removendo o botão de agendamento da nav-bar */
   .btn-scheduling {

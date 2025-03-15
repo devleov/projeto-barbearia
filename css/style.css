@@ -508,12 +508,13 @@
   justify-content: center;
   width: 100%;
 }
-.scheduling .btn-scheduling-now button {
+.scheduling .btn-scheduling-now a {
   display: flex;
   align-items: center;
   justify-content: center;
   -moz-column-gap: 12px;
        column-gap: 12px;
+  text-decoration: none;
   padding: 12px 20px;
   font-size: 16px;
   border-radius: 10px;
@@ -526,11 +527,11 @@
   color: white;
   transition: background-color 0.2s, scale 0.2s;
 }
-.scheduling .btn-scheduling-now button:hover {
+.scheduling .btn-scheduling-now a:hover {
   background-color: #610000;
   scale: 0.99;
 }
-.scheduling .btn-scheduling-now button img {
+.scheduling .btn-scheduling-now a img {
   height: 20px;
   width: 20px;
 }

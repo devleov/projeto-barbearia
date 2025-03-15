@@ -1,3 +1,6 @@
+const telefoneBarbeiro = "17981205360"
+
+
 /* Animação de tremer no botão de whatsapp */
 
 let delay;
@@ -35,44 +38,51 @@ for (let i = 8; i < 18; i++) {
     $("#scheduling-hour").append(`<option>${i}:00</option>`)
 }
 
+/* Função para atualizar o botão de agendamento após todos os inputs serem preenchidos */
+function updateBtnScheduling(nome, data, hora, corte) {
+    const msg = encodeURIComponent(`Olá, meu nome é ${nome} e gostaria de agendar um corte de cabelo no(a):\n\n*Dia:* ${data}\n*Hora prevista:* ${hora}\n*Corte de cabelo:* ${corte}`)
+
+    const whatsapp = `https://wa.me/${telefoneBarbeiro}?text=${msg}`;
+
+    $(".btn-scheduling-now > a").attr("href", whatsapp)
+}
+
 /* Pegando os valores dos campos de agendamento */
-$(".btn-scheduling-now > button").click(function () {
+function verificarCampos() {
+    const nome = $("#scheduling-name").val()
+    const hora = $("#scheduling-hour").val()
+    const corte = $("#scheduling-cut").val()
+    const data = $("#scheduling-date").val()
 
-    const nomeAgendamento = $("#scheduling-name").val()
-    const hourAgendamento = $("#scheduling-hour").val()
-    const corteAgendamento = $("#scheduling-cut").val()
-    const dataAgendamento = $("#scheduling-date").val()
+    const msgAviso = $("#scheduling-warns");
 
-    if (!nomeAgendamento || !hourAgendamento || !corteAgendamento || !dataAgendamento) {
-        $("#scheduling-warns").text("* Preencha todos os campos!")
-            .css("opacity", 1)
+    if (!nome || !hora || !corte || !data) {
+        msgAviso.text("* Preencha todos os campos!")
+        .css("opacity", 1)
+    } else {
+        msgAviso.text("")
+        msgAviso.css("opacity", 0)
 
-        setTimeout(() => {
-            $("#scheduling-warns").css("opacity", 0)
-
-            setTimeout(() => {
-                $("#scheduling-warns").text("")
-            }, 500)
-        }, 7000)
+        updateBtnScheduling(nome, new Date(data).toLocaleDateString("pt-br"), hora, corte)
     }
+}
 
-    const msg = `Olá, meu nome é ${nomeAgendamento} e gostaria de agendar um corte de cabelo no(a):
-    Dia: ${dataAgendamento}
-    Hora prevista: ${hourAgendamento}
-    Corte de cabelo: ${corteAgendamento}`;
-
-    console.log(msg);
-});
+$("#scheduling-name, #scheduling-hour, #scheduling-cut, #scheduling-date").on("input change", verificarCampos)
 
 
 /* Animação no menu ao clicar e ao fechar */
 
-$(".menu-link").click(function() {
+$(".box-menu-link > ul > li > a").click(function () {
+    $(".menu-link").removeClass("active")
+    $(".box-menu-link").removeClass("active").slideToggle(1250)
+})
+
+$(".menu-link").click(function () {
     $(this).toggleClass("active")
-    $(".box-menu-link").toggleClass("active").slideToggle(2000)
+    $(".box-menu-link").toggleClass("active").slideToggle(1000)
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
     if ($(this).width() >= 636) {
         $(".menu-link").removeClass("active")
         $(".box-menu-link").css("display", "none").removeClass("active")
