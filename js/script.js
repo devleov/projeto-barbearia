@@ -69,7 +69,6 @@ function verificarCampos() {
 
 $("#scheduling-name, #scheduling-hour, #scheduling-cut, #scheduling-date").on("input change", verificarCampos)
 
-
 /* Animação no menu ao clicar e ao fechar */
 
 $(".box-menu-link > ul > li > a").click(function () {
