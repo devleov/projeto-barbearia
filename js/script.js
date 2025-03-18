@@ -47,6 +47,14 @@ function updateBtnScheduling(nome, data, hora, corte) {
     $(".btn-scheduling-now > a").attr("href", whatsapp)
 }
 
+$(".btn-scheduling-now > a").on("click", function(e) {
+    verificarCampos()
+
+    if ($(this).attr("href").includes("#")) {
+        e.preventDefault()
+    };
+})
+
 /* Pegando os valores dos campos de agendamento */
 function verificarCampos() {
     const nome = $("#scheduling-name").val()
