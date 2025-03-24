@@ -1,4 +1,4 @@
-const telefoneBarbeiro = "17981205360"
+const telefoneBarbeiro = "11111111111"
 
 
 /* Animação de tremer no botão de whatsapp */

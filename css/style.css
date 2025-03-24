@@ -515,16 +515,15 @@
   -moz-column-gap: 12px;
        column-gap: 12px;
   text-decoration: none;
-  padding: 12px 20px;
+  padding: 12px 20%;
   font-size: 16px;
   border-radius: 10px;
-  width: 50%;
   border: 1px solid black;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Bebas Naue", sans-serif;
   font-weight: bold;
   cursor: pointer;
   background-color: #8B0000;
-  color: white;
+  color: #FEECB7;
   transition: background-color 0.2s, scale 0.2s;
 }
 .scheduling .btn-scheduling-now a:hover {
