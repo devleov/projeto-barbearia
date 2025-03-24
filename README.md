@@ -1,6 +1,8 @@
-# Site que fiz para meu barbeiro
+# Modelo de barbearia 💈
 
-Fica avontade para ver o código :D
-
-Template (molde) feito em 2 dias de empenho
-Por: Léo Vitor
+Destaques do modelo:
+- História da barbearia
+- Tipos de cortes
+- Localização da barbearia no google maps
+- Agendamento de corte para whatsapp
+- Direitos autorais e redes sociais
